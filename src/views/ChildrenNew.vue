@@ -27,6 +27,7 @@ export default {
     return {
       newChildName: "",
       newChildBirthdate: "",
+      errors: [],
     };
   },
   created: function () {},
