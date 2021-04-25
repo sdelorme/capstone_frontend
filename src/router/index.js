@@ -5,6 +5,7 @@ import MilestonesIndex from "../views/MilestonesIndex.vue";
 import MilestonesShow from "../views/MilestonesShow.vue";
 import ChildrenNew from "../views/ChildrenNew.vue";
 import ChildrenShow from "../views/ChildrenShow.vue";
+import ChildrenMilestonesSummary from "../views/ChildrenMilestonesSummary.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     path: "/children/:id",
     name: "children-show",
     component: ChildrenShow,
+  },
+  {
+    path: "/children/:id/milestones",
+    name: "children-milestones-summary",
+    component: ChildrenMilestonesSummary,
   },
   {
     path: "/milestones/:id",
