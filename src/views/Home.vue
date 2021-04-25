@@ -20,7 +20,7 @@ export default {
     };
   },
   created: function () {
-    axios.get("/api/children").then((response)=> {
+    axios.get("/api/children").then((response) => {
       console.log("children index", response);
       this.children = response.data;
     });

@@ -1,20 +1,31 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Milestones from "../views/MilestonesIndex.vue";
+import MilestonesIndex from "../views/MilestonesIndex.vue";
+import ChildrenNew from "../views/ChildrenNew.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "children-index",
+    component: Home,
+  },
+  {
+    path: "/children",
+    name: "children-index",
     component: Home,
   },
   {
     path: "/milestones",
-    name: "Milestones",
-    component: Milestones,
+    name: "milestones-index",
+    component: MilestonesIndex,
+  },
+  {
+    path: "/children/new",
+    name: "children-new",
+    component: ChildrenNew,
   },
   {
     path: "/about",
