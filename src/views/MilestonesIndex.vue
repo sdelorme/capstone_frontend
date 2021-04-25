@@ -6,6 +6,8 @@
         <strong>{{ milestone.milestone_category }}</strong>
         <br />
         {{ milestone.description }}
+        <br />
+        <i>Expected at: {{ milestone.stage }} Months</i>
         <hr />
       </div>
     </div>
