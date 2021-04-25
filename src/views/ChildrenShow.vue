@@ -4,8 +4,10 @@
     <h3>Born: {{ child.birthdate }}</h3>
     <h5>Milestones</h5>
     <div v-for="milestone in child.milestones" :key="milestone.id">
-      <p>{{ milestone.milestone_category }}</p>
-      <p>{{ milestone.description }}</p>
+      <p>
+        <b>Category: {{ milestone.milestone_category }}</b>
+      </p>
+      <p>Milestone: {{ milestone.description }}</p>
       <hr />
     </div>
     <p>INSERT LINK TO MILESTONES SUMMARY PAGE HERE</p>
