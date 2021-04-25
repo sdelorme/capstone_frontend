@@ -2,7 +2,12 @@
   <div class="children-show">
     <h1>{{ child.name }}</h1>
     <h3>Born: {{ child.birthdate }}</h3>
-    <p>Milestones: {{ child.milestones }}</p>
+    <h5>Milestones</h5>
+    <div v-for="milestone in child.milestones" :key="milestone.id">
+      <p>{{ milestone.milestone_category }}</p>
+      <p>{{ milestone.description }}</p>
+      <hr />
+    </div>
     <p>INSERT LINK TO MILESTONES SUMMARY PAGE HERE</p>
     <p>INSERT LINK TO GROWTH SUMMARY PAGE HERE</p>
     <router-link to="/children">Back to all chldren</router-link>

@@ -8,6 +8,8 @@
         {{ milestone.description }}
         <br />
         <i>Expected at: {{ milestone.stage }} Months</i>
+        <br />
+        <router-link v-bind:to="`/milestones/${milestone.id}`">Click here to learn more</router-link>
         <hr />
       </div>
     </div>
