@@ -6,7 +6,9 @@
         <b>Category: {{ milestone.milestone_category }}</b>
       </p>
       <p>Milestone: {{ milestone.description }}</p>
-      <p>FIND WAY TO INCLUDE DATE ACCOMPLISHED FROM JOIN TABLE</p>
+      <p v-for="date in child.date_accomplished" :key="date.id">
+        Date accomplished: HELP!!!!!! {{ date.date_accomplished }}
+      </p>
       <hr />
     </div>
     <hr />
@@ -15,7 +17,8 @@
     <hr />
     <h2>Choose the Milestone Your Child Accomplished By Selecting Below</h2>
     <div v-for="newMilestone in milestones" :key="newMilestone.id">
-      <strong>{{ newMilestone.milestone_category }}</strong>
+      <p><input type="checkbox" v-model="newMilestone.id" /></p>
+      {{ newMilestone.milestone_category }}
       <br />
       {{ newMilestone.description }}
       <br />
@@ -35,6 +38,7 @@ export default {
       message: "",
       child: {},
       milestones: [],
+      children_milestones: [],
     };
   },
   created: function () {
