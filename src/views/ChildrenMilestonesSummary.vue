@@ -18,7 +18,6 @@
     <hr />
     <hr />
     <h2>Choose the Milestone Your Child Accomplished By Selecting Below</h2>
-    {{ children_milestones }}
     <div v-for="newMilestone in milestones" :key="newMilestone.id">
       <input type="checkbox" name="milestones" v-model="children_milestones" v-bind:value="newMilestone.id" />
       {{ newMilestone.milestone_category }}
@@ -28,7 +27,7 @@
       <i>Expected at: {{ newMilestone.stage }} Months</i>
       <hr />
     </div>
-    <button v-on:click="addChildMilestone()">Click me</button>
+    <button v-on:click="addChildMilestone()">Add Milestone</button>
   </div>
 </template>
 
@@ -64,6 +63,7 @@ export default {
       };
       axios.post("/api/children_milestones", params).then((response) => {
         console.log("adding child milestone", response);
+        location.reload();
       });
     },
   },
