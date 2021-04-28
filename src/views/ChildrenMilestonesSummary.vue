@@ -8,6 +8,8 @@
       <p>Milestone: {{ milestone.description }}</p>
       <p v-for="date in child.date_accomplished" :key="date.id">
         Date accomplished: HELP!!!!!! {{ date.date_accomplished }}
+        <br />
+        Status: {{ date.status }}
       </p>
       <hr />
     </div>
@@ -16,8 +18,9 @@
     <hr />
     <hr />
     <h2>Choose the Milestone Your Child Accomplished By Selecting Below</h2>
+    {{ children_milestones }}
     <div v-for="newMilestone in milestones" :key="newMilestone.id">
-      <p><input type="checkbox" v-model="newMilestone.id" /></p>
+      <input type="checkbox" name="milestones" v-model="children_milestones" v-bind:value="newMilestone.id" />
       {{ newMilestone.milestone_category }}
       <br />
       {{ newMilestone.description }}
@@ -25,6 +28,7 @@
       <i>Expected at: {{ newMilestone.stage }} Months</i>
       <hr />
     </div>
+    <button v-on:click="addChildMilestone()">Click me</button>
   </div>
 </template>
 
@@ -35,7 +39,6 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "",
       child: {},
       milestones: [],
       children_milestones: [],
@@ -51,6 +54,18 @@ export default {
       this.milestones = response.data;
     });
   },
-  methods: {},
+  methods: {
+    addChildMilestone: function () {
+      var params = {
+        child_id: this.child.id,
+        children_milestones: this.children_milestones,
+        // add date accomplished here
+        status: "true",
+      };
+      axios.post("/api/children_milestones", params).then((response) => {
+        console.log("adding child milestone", response);
+      });
+    },
+  },
 };
 </script>
