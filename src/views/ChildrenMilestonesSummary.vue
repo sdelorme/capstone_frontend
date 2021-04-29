@@ -6,11 +6,8 @@
         <b>Category: {{ milestone.milestone_category }}</b>
       </p>
       <p>Milestone: {{ milestone.description }}</p>
-      <p v-for="date in child.date_accomplished" :key="date.id">
-        Date accomplished: HELP!!!!!! {{ date.date_accomplished }}
-        <br />
-        Status: {{ date.status }}
-      </p>
+      {{ child.children_milestones }}
+      Date Accomplished: {{ milestone.date_accomplished }}
       <hr />
     </div>
     <hr />
@@ -19,12 +16,14 @@
     <hr />
     <h2>Choose the Milestone Your Child Accomplished By Selecting Below</h2>
     <div v-for="newMilestone in milestones" :key="newMilestone.id">
-      <input type="checkbox" name="milestones" v-model="children_milestones" v-bind:value="newMilestone.id" />
+      <input type="checkbox" name="milestones" v-model="newMilestone.status" v-bind:value="newMilestone.id" />
       {{ newMilestone.milestone_category }}
       <br />
       {{ newMilestone.description }}
       <br />
       <i>Expected at: {{ newMilestone.stage }} Months</i>
+      <p><input type="date" v-model="newMilestone.date" /></p>
+      <p>{{ newMilestone }}</p>
       <hr />
     </div>
     <button v-on:click="addChildMilestone()">Add Milestone</button>
@@ -40,7 +39,8 @@ export default {
     return {
       child: {},
       milestones: [],
-      children_milestones: [],
+      newChildrenMilestone: [],
+      newMilestoneDate: "",
     };
   },
   created: function () {
@@ -57,9 +57,8 @@ export default {
     addChildMilestone: function () {
       var params = {
         child_id: this.child.id,
-        children_milestones: this.children_milestones,
-        // add date accomplished here
-        status: "true",
+        children_milestones: this.milestones,
+        date_accomplished: this.milestones.date,
       };
       axios.post("/api/children_milestones", params).then((response) => {
         console.log("adding child milestone", response);
