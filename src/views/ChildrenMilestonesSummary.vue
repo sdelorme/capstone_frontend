@@ -39,7 +39,6 @@ export default {
     return {
       child: {},
       milestones: [],
-      newChildrenMilestone: [],
       newMilestoneDate: "",
     };
   },
@@ -47,18 +46,22 @@ export default {
     axios.get("/api/children/" + this.$route.params.id).then((response) => {
       console.log("child show", response);
       this.child = response.data;
+      this.milestones = response.data.incomplete_milestones;
     });
-    axios.get("/api/milestones").then((response) => {
-      console.log("milestones index", response);
-      this.milestones = response.data;
-    });
+    // axios.get("/api/milestones").then((response) => {
+    //   console.log("milestones index", response);
+    //   this.milestones = response.data;
+    //   // const childMilestoneIds = this.child.milestones.map((milestone) => milestone.id);
+    //   // console.log(childMilestoneIds);
+    //   // this.milestones = response.data.filter((milestone) => childMilestoneIds.indexOf(milestone.id) == -1);
+    // });
   },
   methods: {
     addChildMilestone: function () {
       var params = {
         child_id: this.child.id,
-        children_milestones: this.milestones,
-        date_accomplished: this.milestones.date,
+        children_milestones: this.milestones.filter((milestone) => milestone.status),
+        // date_accomplished: this.milestones.date,
       };
       axios.post("/api/children_milestones", params).then((response) => {
         console.log("adding child milestone", response);
