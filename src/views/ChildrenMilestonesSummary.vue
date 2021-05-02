@@ -48,13 +48,7 @@ export default {
       this.child = response.data;
       this.milestones = response.data.incomplete_milestones;
     });
-    // axios.get("/api/milestones").then((response) => {
-    //   console.log("milestones index", response);
-    //   this.milestones = response.data;
-    //   // const childMilestoneIds = this.child.milestones.map((milestone) => milestone.id);
-    //   // console.log(childMilestoneIds);
-    //   // this.milestones = response.data.filter((milestone) => childMilestoneIds.indexOf(milestone.id) == -1);
-    // });
+    // r
   },
   methods: {
     addChildMilestone: function () {
