@@ -36,6 +36,7 @@ export default {
       var params = {
         name: this.newChildName,
         birthdate: this.newChildBirthdate,
+        user_id: localStorage.getItem("user_id"),
       };
       axios
         .post("/api/children", params)

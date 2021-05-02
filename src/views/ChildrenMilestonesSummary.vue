@@ -21,9 +21,11 @@
       <br />
       {{ newMilestone.description }}
       <br />
-      <i>Expected at: {{ newMilestone.stage }} Months</i>
+      <i>
+        <small>Expected at: {{ newMilestone.stage }} Months</small>
+        {{ newMilestone }}
+      </i>
       <p><input type="date" v-model="newMilestone.date" /></p>
-      <p>{{ newMilestone }}</p>
       <hr />
     </div>
     <button v-on:click="addChildMilestone()">Add Milestone</button>
@@ -48,7 +50,6 @@ export default {
       this.child = response.data;
       this.milestones = response.data.incomplete_milestones;
     });
-    // r
   },
   methods: {
     addChildMilestone: function () {
