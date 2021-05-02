@@ -5,7 +5,9 @@
       |
       <router-link v-if="!isLoggedIn()" to="/login">Login</router-link>
       |
-      <router-link v-if="isLoggedIn()" to="/children">Home</router-link>
+      <router-link to="/">Home</router-link>
+      |
+      <router-link v-if="isLoggedIn()" to="/children">My Children</router-link>
       |
       <router-link to="/milestones">CDC Milestones</router-link>
       |

@@ -1,30 +1,22 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <div v-for="child in children" :key="child.id">
-      <router-link v-bind:to="`/children/${child.id}`">Child: {{ child.name }}</router-link>
-      <hr />
-    </div>
+    <router-link v-bind:to="`/children`">Take me to my children</router-link>
+    <br />
+    <router-link v-bind:to="`/milestones`">Take me to the CDC Milestones</router-link>
   </div>
 </template>
 
 <style></style>
 
 <script>
-import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Here are all the kids you have!",
-      children: [],
+      message: "Welcome to Vue.js!",
     };
   },
-  created: function () {
-    axios.get("/api/children").then((response) => {
-      console.log("children index", response);
-      this.children = response.data;
-    });
-  },
+  created: function () {},
   methods: {},
 };
 </script>

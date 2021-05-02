@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import MyChildren from "../views/MyChildren.vue";
 import MilestonesIndex from "../views/MilestonesIndex.vue";
 import MilestonesShow from "../views/MilestonesShow.vue";
 import ChildrenNew from "../views/ChildrenNew.vue";
@@ -30,13 +31,13 @@ const routes = [
   },
   {
     path: "/",
-    name: "children-index",
+    name: "home-page",
     component: Home,
   },
   {
     path: "/children",
     name: "children-index",
-    component: Home,
+    component: MyChildren,
   },
   {
     path: "/children/new",
