@@ -40,8 +40,8 @@
           <div class="col-lg-4 ml-auto">
             <p class="lead">
               Grow, Baby, Grow was created to provide new parents a one-stop shop for everything baby. Right now GBG
-              serves as a reference to and tracker of your child's milestones. All milestones listed in GBG are from the
-              CDC.
+              serves as a reference to and tracker of your child's developmental milestones. All milestones listed in
+              GBG are from the CDC.
             </p>
           </div>
           <div class="col-lg-4 mr-auto">

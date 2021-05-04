@@ -40,7 +40,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Welcome to the Milestones Index Page!",
+      message: "CDC's Developmental Milestones",
       milestones: [],
     };
   },
