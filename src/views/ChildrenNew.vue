@@ -1,5 +1,5 @@
 <template>
-  <div class="children-new">
+  <div class="children-new masthead bg-primary text-white text-center">
     <h1>New Child</h1>
     <form v-on:submit.prevent="createChild()">
       <ul>

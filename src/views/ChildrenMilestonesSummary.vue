@@ -1,34 +1,91 @@
 <template>
-  <div class="children-milestones-summary">
-    <h1>Child's Milestone Summary</h1>
-    <div v-for="milestone in child.milestones" :key="milestone.id">
-      <p>
-        <b>Category: {{ milestone.milestone_category }}</b>
-      </p>
-      <p>Milestone: {{ milestone.description }}</p>
-      {{ child.children_milestones }}
-      Date Accomplished: {{ milestone.date_accomplished }}
+  <div class="children-milestones-summary bg-primary text-center">
+    <section class="page-section portfolio" id="portfolio">
+      <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+          {{ child.name }}'s Milestone Summary
+        </h2>
+
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center">
+          <!-- Portfolio Item 1-->
+          <div v-for="milestone in child.milestones" :key="milestone.id" class="col-md-6 col-lg-4 mb-5 col-sm-6">
+            <div class="card portfolio-item mx-auto h-100">
+              <div class="card-body portfolio-item-caption-content text-center">
+                <h5 class="card-header">SUMMARY</h5>
+                <p class="card-body">
+                  <b>Category:</b>
+                  {{ milestone.milestone_category }}
+                  <br />
+                  <br />
+                  <b>Milestone:</b>
+                  {{ milestone.description }}
+                </p>
+                <div class="card-footer text-muted">
+                  <p>
+                    <b>Date Accomplished:</b>
+                    {{ milestone.date_accomplished }}
+                  </p>
+                  <hr />
+                  <i>Expected at: {{ milestone.stage }} Months</i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <hr />
-    </div>
-    <hr />
-    <hr />
-    <hr />
-    <hr />
-    <h2>Choose the Milestone Your Child Accomplished By Selecting Below</h2>
-    <div v-for="newMilestone in milestones" :key="newMilestone.id">
-      <input type="checkbox" name="milestones" v-model="newMilestone.status" v-bind:value="newMilestone.id" />
-      {{ newMilestone.milestone_category }}
-      <br />
-      {{ newMilestone.description }}
-      <br />
-      <i>
-        <small>Expected at: {{ newMilestone.stage }} Months</small>
-        {{ newMilestone }}
-      </i>
-      <p><input type="date" v-model="newMilestone.date" /></p>
-      <hr />
-    </div>
-    <button v-on:click="addChildMilestone()">Add Milestone</button>
+    </section>
+    <!-- this is where the incomplete_milestones start -->
+    <section class="page-section portfolio" id="portfolio">
+      <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ message }}</h2>
+
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg" v-on:click="addChildMilestone()">Record Milestones</button>
+        <br />
+        <br />
+        <br />
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center">
+          <!-- Portfolio Item 1-->
+          <div v-for="newMilestone in milestones" :key="newMilestone.id" class="col-md-6 col-lg-4 mb-5 col-sm-6">
+            <div class="card portfolio-item mx-auto h-100">
+              <div class="card-body portfolio-item-caption-content text-center">
+                <input type="checkbox" name="milestones" v-model="newMilestone.status" v-bind:value="newMilestone.id" />
+                <label class="form-check-label" for="milestones">Select</label>
+                <h5 class="card-header">{{ newMilestone.milestone_category }}</h5>
+                <p class="card-body">{{ newMilestone.description }}</p>
+                <!-- <router-link v-bind:to="`/milestones/${newMilestone.id}`" class="btn btn-primary">
+                  Click here to learn more
+                </router-link> -->
+                <div class="card-footer text-muted">
+                  <p>
+                    Date Accomplished
+                    <input type="date" v-model="newMilestone.date" />
+                  </p>
+                  <hr />
+                  <i>Expected at: {{ newMilestone.stage }} Months</i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -40,6 +97,7 @@ export default {
   data: function () {
     return {
       child: {},
+      message: "Choose which milestone was accomplished:",
       milestones: [],
       newMilestoneDate: "",
     };

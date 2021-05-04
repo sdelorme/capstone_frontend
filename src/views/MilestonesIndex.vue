@@ -1,9 +1,9 @@
 <template>
-  <div class="milestones-index">
+  <div class="milestones-index bg-primary text-center">
     <section class="page-section portfolio" id="portfolio">
       <div class="container">
         <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Milestones</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ message }}</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
           <div class="divider-custom-line"></div>
@@ -17,7 +17,7 @@
             <div class="card portfolio-item mx-auto h-100">
               <div class="card-body portfolio-item-caption-content text-center">
                 <h5 class="card-header">{{ milestone.milestone_category }}</h5>
-                <p class="card-text">{{ milestone.description }}</p>
+                <p class="card-body">{{ milestone.description }}</p>
                 <router-link v-bind:to="`/milestones/${milestone.id}`" class="btn btn-primary">
                   Click here to learn more
                 </router-link>
