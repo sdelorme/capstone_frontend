@@ -39,14 +39,16 @@
         <div class="row">
           <div class="col-lg-4 ml-auto">
             <p class="lead">
-              Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source
-              files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
+              Grow, Baby, Grow was created to provide new parents a one-stop shop for everything baby. Right now GBG
+              serves as a reference to and tracker of your child's milestones. All milestones listed in GBG are from the
+              CDC.
             </p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">
-              You can create your own custom avatar for the masthead, change the icon in the dividers, and add your
-              email address to the contact form to make it fully functional!
+              Many new things to come in the near future to Grow, Baby, Grow! You will soon be able to post pictures
+              along the way, track your child's growth metrics, and share all of these magical moments with your parent
+              friends!
             </p>
           </div>
         </div>
