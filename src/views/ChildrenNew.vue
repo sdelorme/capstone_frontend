@@ -13,6 +13,10 @@
         Birthdate:
         <input v-model="newChildBirthdate" />
       </p>
+      <p>
+        Image:
+        <input v-model="newChildImage" />
+      </p>
       <p><input type="submit" value="Add Child" /></p>
     </form>
   </div>
@@ -27,6 +31,7 @@ export default {
     return {
       newChildName: "",
       newChildBirthdate: "",
+      newChildImage: "",
       errors: [],
     };
   },
@@ -36,6 +41,7 @@ export default {
       var params = {
         name: this.newChildName,
         birthdate: this.newChildBirthdate,
+        image: this.newChildImage,
         user_id: localStorage.getItem("user_id"),
       };
       axios
