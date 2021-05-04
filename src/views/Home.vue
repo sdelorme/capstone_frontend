@@ -3,15 +3,15 @@
     <header class="masthead bg-primary text-secondary text-center">
       <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
-        <img class="masthead-avatar mb-5" src="/assets/img/giraffe-mother-baby.jpg" alt="..." />
-        <!-- Masthead Heading-->
-        <h1 class="masthead-heading text-uppercase mb-0">{{ message }}</h1>
-        <!-- Icon Divider-->
+        <h1 class="text-uppercase mb-0">{{ message }}</h1>
         <div class="divider-custom divider-dark">
           <div class="divider-custom-line"></div>
           <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>
           <div class="divider-custom-line"></div>
         </div>
+        <img class="masthead-avatar mb-5" src="/assets/img/vector-baby-silhouettes-removebg-preview.jpg" alt="..." />
+        <!-- Masthead Heading-->
+        <!-- Icon Divider-->
         <!-- Masthead Subheading-->
         <p class="masthead-subheading font-weight-light mb-0">
           <a type="button" class="btn btn-primary" v-if="$parent.isLoggedIn()" href="/children">
@@ -90,7 +90,7 @@
 export default {
   data: function () {
     return {
-      message: "Welcome parents!",
+      message: "Welcome to Grow, Baby, Grow!",
     };
   },
   created: function () {},
