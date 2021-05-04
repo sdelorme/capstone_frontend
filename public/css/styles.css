@@ -10539,7 +10539,6 @@ a.text-dark:focus {
 
 .masthead .masthead-avatar {
   width: 15rem;
-  border-radius: 90%;
 }
 
 @media (min-width: 992px) {

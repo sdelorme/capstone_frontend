@@ -1,24 +1,26 @@
 <template>
-  <div class="children-new masthead bg-primary text-white text-center">
-    <h1>New Child</h1>
-    <form v-on:submit.prevent="createChild()">
-      <ul>
-        <li v-for="error in errors" :key="error.id">{{ error }}</li>
-      </ul>
-      <p>
-        Name:
-        <input v-model="newChildName" />
-      </p>
-      <p>
-        Birthdate:
-        <input v-model="newChildBirthdate" />
-      </p>
-      <p>
-        Image:
-        <input v-model="newChildImage" />
-      </p>
-      <p><input type="submit" value="Add Child" /></p>
-    </form>
+  <div class="masthead bg-primary text-white text-center">
+    <div class="container">
+      <h1>New Child</h1>
+      <form v-on:submit.prevent="createChild()">
+        <ul>
+          <li v-for="error in errors" :key="error.id">{{ error }}</li>
+        </ul>
+        <p>
+          Name:
+          <input v-model="newChildName" />
+        </p>
+        <p>
+          Birthdate:
+          <input v-model="newChildBirthdate" />
+        </p>
+        <p>
+          Image:
+          <input v-model="newChildImage" />
+        </p>
+        <p><input type="submit" value="Add Child" /></p>
+      </form>
+    </div>
   </div>
 </template>
 
