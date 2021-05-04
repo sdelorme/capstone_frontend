@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login masthead bg-primary text-secondary text-center">
     <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>

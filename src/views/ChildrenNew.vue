@@ -1,24 +1,28 @@
 <template>
-  <div class="masthead bg-primary text-white text-center">
+  <div class="masthead bg-primary text-secondary text-center">
     <div class="container">
-      <h1>New Child</h1>
+      <h1 class="masthead-heading text-center mb-2">New Child</h1>
+      <hr />
       <form v-on:submit.prevent="createChild()">
         <ul>
           <li v-for="error in errors" :key="error.id">{{ error }}</li>
         </ul>
-        <p>
+        <p class="masthead-subheading font-weight-light mb-0">
           Name:
           <input v-model="newChildName" />
         </p>
-        <p>
+        <br />
+        <p class="masthead-subheading font-weight-light mb-0">
           Birthdate:
           <input v-model="newChildBirthdate" />
         </p>
-        <p>
+        <br />
+        <p class="masthead-subheading font-weight-light mb-0">
           Image:
           <input v-model="newChildImage" />
         </p>
-        <p><input type="submit" value="Add Child" /></p>
+        <hr />
+        <p><input class="btn btn-primary" type="submit" value="Add Child" /></p>
       </form>
     </div>
   </div>

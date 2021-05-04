@@ -24,7 +24,7 @@
               <li v-if="!isLoggedIn()" class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login">Login</a>
               </li>
-              <li class="nav-item mx-0 mx-lg-1">
+              <li v-if="isLoggedIn()" class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Home</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
@@ -32,9 +32,6 @@
               </li>
               <li v-if="isLoggedIn()" class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/children">My Children</a>
-              </li>
-              <li v-if="isLoggedIn()" class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/children/new">Add Child</a>
               </li>
               <li v-if="isLoggedIn()" class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a>

@@ -1,10 +1,10 @@
 <template>
-  <div class="home masthead bg-primary text-white text-center">
+  <div class="home masthead bg-primary text-secondary text-center">
     <div class="container d-flex align-items-center flex-column">
       <!-- Masthead Heading-->
       <h1 class="masthead-heading text-uppercase mb-0">{{ message }}</h1>
       <!-- Icon Divider-->
-      <div class="divider-custom divider-light">
+      <div class="divider-custom divider-dark">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>
         <div class="divider-custom-line"></div>
@@ -18,6 +18,7 @@
 
         <hr />
       </div>
+      <router-link type="button" class="btn btn-primary" v-bind:to="`/children/new`">Add a child</router-link>
     </div>
   </div>
 </template>
