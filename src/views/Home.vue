@@ -14,12 +14,12 @@
         <!-- Icon Divider-->
         <!-- Masthead Subheading-->
         <p class="masthead-subheading font-weight-light mb-0">
-          <a type="button" class="btn btn-primary" v-if="$parent.isLoggedIn()" href="/children">
+          <a type="button" class="btn btn-primary text-white" v-if="$parent.isLoggedIn()" href="/children">
             Take me to my children
           </a>
         </p>
         <p class="masthead-subheading font-weight-light mb-0">
-          <router-link type="button" class="btn btn-primary" v-bind:to="`/milestones`">
+          <router-link type="button" class="btn btn-primary text-white" v-bind:to="`/milestones`">
             Take me to the CDC Milestones
           </router-link>
         </p>

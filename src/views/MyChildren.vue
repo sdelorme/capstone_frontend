@@ -18,7 +18,9 @@
 
         <hr />
       </div>
-      <router-link type="button" class="btn btn-primary" v-bind:to="`/children/new`">Add a child</router-link>
+      <router-link type="button" class="btn btn-primary text-white" v-bind:to="`/children/new`">
+        Add a child
+      </router-link>
     </div>
   </div>
 </template>
