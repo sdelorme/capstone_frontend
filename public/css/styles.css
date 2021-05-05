@@ -4260,9 +4260,12 @@ input[type="button"].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: inherit;
   white-space: nowrap;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4275,6 +4278,9 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 .navbar-nav .nav-link {
   padding-right: 0;
@@ -4304,6 +4310,9 @@ input[type="button"].btn-block {
   background-color: #1abc9c;
   border: 0.125rem solid transparent;
   border-radius: 0.5rem;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 .navbar-toggler:hover,
 .navbar-toggler:focus {
@@ -10652,6 +10661,9 @@ form .row:first-child .floating-label-form-group {
   color: #fff;
   display: flex;
   align-items: center;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 
 .copyright {

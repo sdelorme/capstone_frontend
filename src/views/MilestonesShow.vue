@@ -1,13 +1,19 @@
 <template>
-  <div class="milestone-show">
+  <div class="milestone-show masthead bg-primary text-secondary text-center">
     <div>
-      <strong>{{ milestone.milestone_category }}</strong>
+      <p>
+        <strong>Category: {{ milestone.milestone_category }}</strong>
+      </p>
       <br />
-      {{ milestone.description }}
+      <p>Description: {{ milestone.description }}</p>
       <br />
-      <i>Expected at: {{ milestone.stage }} Months</i>
+      <p>
+        <i>Expected at: {{ milestone.stage }} Months</i>
+      </p>
       <hr />
-      <h1>INSERT VIDEO URL TO PLAY HERE/PICTURE TO VIEW HERE</h1>
+      <img class="masthead-heading mb-2" src="http://phil.cdc.gov/PHIL_Images/20656/20656_lores.jpg" alt="..." />
+      <img class="masthead-heading mb-2" src="http://phil.cdc.gov/PHIL_Images/20657/20657_lores.jpg" alt="..." />
+      <img class="masthead-heading mb-2" src="http://phil.cdc.gov/PHIL_Images/20658/20658_lores.jpg" alt="..." />
     </div>
     <router-link to="/milestones">Back to all milestones</router-link>
   </div>

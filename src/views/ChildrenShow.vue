@@ -6,7 +6,7 @@
       <h3 class="mb-2 text-primary">Born: {{ child.birthdate }}</h3>
       <img class="masthead-heading mb-2" v-bind:src="child.image" alt="..." />
       <!-- Icon Divider-->
-      <div class="divider-custom divider-light">
+      <div class="divider-custom divider-dark">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>
         <div class="divider-custom-line"></div>
@@ -17,7 +17,17 @@
           Click here to see your child's milestone summary
         </router-link>
       </p>
+      <div class="divider-custom divider-dark">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
       <p class="masthead-subheading font-weight-light text-primary mb-0"><i>Coming soon: Link to growth log</i></p>
+      <div class="divider-custom divider-dark">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
       <router-link class="masthead-subheading font-weight-light text-primary mb-0" to="/children">
         Back to all chldren
       </router-link>
