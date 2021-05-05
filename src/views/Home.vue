@@ -3,7 +3,7 @@
     <header class="masthead bg-primary text-secondary text-center">
       <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
-        <h1 class="text-uppercase mb-0">{{ message }}</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">{{ message }}</h1>
         <div class="divider-custom divider-dark">
           <div class="divider-custom-line"></div>
           <div class="divider-custom-icon"><i class="fas fa-baby-carriage"></i></div>

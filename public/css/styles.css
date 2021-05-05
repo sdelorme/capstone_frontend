@@ -10398,10 +10398,16 @@ a.text-dark:focus {
 }
 .page-section {
   padding: 10rem 0;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
   line-height: 2rem;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 @media (min-width: 992px) {
   .page-section .page-section-heading {
@@ -10537,13 +10543,22 @@ a.text-dark:focus {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
   color: inherit;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
+  font-family: "Chewy", cursive;
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Shadows Into Light Two", cursive;
 }
 
 .masthead .masthead-avatar {
