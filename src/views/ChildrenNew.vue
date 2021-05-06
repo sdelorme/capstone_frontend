@@ -18,7 +18,7 @@
         </p>
         <br />
         <p class="masthead-subheading font-weight-light mb-0">
-          Image:
+          Profile Picture:
           <input v-model="newChildImage" />
         </p>
         <hr />
