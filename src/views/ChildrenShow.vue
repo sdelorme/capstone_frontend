@@ -12,7 +12,7 @@
         <div class="divider-custom-line"></div>
       </div>
       <!-- Masthead Subheading-->
-      <p class="masthead-subheading font-weight-light mb-0">
+      <p class="masthead-subheading text-primary font-weight-light mb-0">
         <router-link v-bind:to="`/children/${child.id}/milestones`">
           Click here to see your child's milestone summary
         </router-link>
