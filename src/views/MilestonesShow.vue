@@ -18,9 +18,7 @@
         </i>
       </p>
       <hr />
-      <img class="masthead-heading mb-2" src="http://phil.cdc.gov/PHIL_Images/20656/20656_lores.jpg" alt="..." />
-      <img class="masthead-heading mb-2" src="http://phil.cdc.gov/PHIL_Images/20657/20657_lores.jpg" alt="..." />
-      <img class="masthead-heading mb-2" src="http://phil.cdc.gov/PHIL_Images/20658/20658_lores.jpg" alt="..." />
+      <img class="masthead-heading mb-2" src="INSERT CODE HERE TO PULL FROM MILESTONES.MEDIA" alt="..." />
     </div>
     <router-link to="/milestones">Back to all milestones</router-link>
   </div>
