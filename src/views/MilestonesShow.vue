@@ -18,7 +18,6 @@
         </i>
       </p>
       <hr />
-      <img class="masthead-heading mb-2" src="INSERT CODE HERE TO PULL FROM MILESTONES.MEDIA" alt="..." />
     </div>
     <router-link to="/milestones">Back to all milestones</router-link>
   </div>

@@ -29,7 +29,7 @@
         <div class="divider-custom-line"></div>
       </div>
       <router-link class="masthead-subheading font-weight-light text-primary mb-0" to="/children">
-        Back to all chldren
+        Back to all children
       </router-link>
       <p class="masthead-subheading font-weight-light mb-0"></p>
     </div>

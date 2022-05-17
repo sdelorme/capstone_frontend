@@ -21,6 +21,7 @@
           Profile Picture:
           <input v-model="newChildImage" />
         </p>
+        <p>Use an image URL</p>
         <hr />
         <p><input class="btn btn-primary" type="submit" value="Add Child" /></p>
       </form>
